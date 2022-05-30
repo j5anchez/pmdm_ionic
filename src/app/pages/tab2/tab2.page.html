@@ -1,0 +1,12 @@
+<ion-list-header>
+  <ion-label>Sucesos guardados</ion-label>
+</ion-list-header>
+
+<ion-content>
+
+  <ion-item *ngIf="gestionSucesosLeer.getSucesos().length===0" color="primary">
+    No hay sucesos para leer
+  </ion-item>
+
+  <app-sucesos [listaSucesos]="gestionSucesosLeer.getSucesos()"></app-sucesos>
+</ion-content>
